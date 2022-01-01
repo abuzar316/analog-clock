@@ -1,0 +1,59 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+.flex-center{display: flex;justify-content: center;align-items: center;flex-wrap: wrap;}
+.container{width: 100%; height: 100vh;}
+.Clock{width: 400px;height: 400px; background: #000; border-radius: 50%;position: relative;}
+.center-point{width: 200px;height: 200px;background: cornflowerblue;position: absolute;z-index: 1; border-radius: 50%;}
+.center-point >div{width: 15px;height: 15px; background: #000; position: absolute; border-radius: 50%;}
+.center-point >div>div{width: 5px;height: 5px; background: red; position: absolute; border-radius: 50%;}
+
+
+
+.clock-inner{width: 360px; height: 360px; background: #fff; border-radius: 50%;}
+.clock-inner {position: relative;}
+.clock-inner > div{position: absolute; font-size: 28px; font-weight: 600;}
+
+.clock-inner > div:nth-child(1){transform: rotate(30deg) translateY(-160px);}
+.clock-inner > div:nth-child(2){transform: rotate(60deg) translateY(-160px);}
+.clock-inner > div:nth-child(3){transform: rotate(90deg) translateY(-160px);}
+.clock-inner > div:nth-child(4){transform: rotate(120deg) translateY(-160px);}
+.clock-inner > div:nth-child(5){transform: rotate(150deg) translateY(-160px);}
+.clock-inner > div:nth-child(6){transform: rotate(180deg) translateY(-160px);}
+.clock-inner > div:nth-child(7){transform: rotate(210deg) translateY(-160px);}
+.clock-inner > div:nth-child(8){transform: rotate(240deg) translateY(-160px);}
+.clock-inner > div:nth-child(9){transform: rotate(270deg) translateY(-160px);}
+.clock-inner > div:nth-child(10){transform: rotate(300deg) translateY(-160px);}
+.clock-inner > div:nth-child(11){transform: rotate(330deg) translateY(-160px);}
+.clock-inner > div:nth-child(12){transform: rotate(360deg) translateY(-160px);}
+
+.clock-inner .number strong{display: inline-block;}
+
+.clock-inner .number:nth-child(1) strong{transform: rotate(330deg);}
+.clock-inner .number:nth-child(2) strong{transform: rotate(300deg);}
+.clock-inner .number:nth-child(3) strong{transform: rotate(270deg);}
+.clock-inner .number:nth-child(4) strong{transform: rotate(240deg);}
+.clock-inner .number:nth-child(5) strong{transform: rotate(210deg);}
+.clock-inner .number:nth-child(6) strong{transform: rotate(180deg);}
+.clock-inner .number:nth-child(7) strong{transform: rotate(150deg);}
+.clock-inner .number:nth-child(8) strong{transform: rotate(120deg);}
+.clock-inner .number:nth-child(9) strong{transform: rotate(90deg);}
+.clock-inner .number:nth-child(10) strong{transform: rotate(60deg);}
+.clock-inner .number:nth-child(11) strong{transform: rotate(30deg);}
+.clock-inner .number:nth-child(12) strong{transform: rotate(0deg);}
+
+
+.sec-hand{position: absolute; width: 1px; height: 1px; z-index: 9; background: red; animation: sec-hand 60s linear infinite}
+.sec-hand::after{content: '';width: 3px; height: 165px; position: absolute;left: -1px;top: -25px; background: red;}
+.sec-hand::before{content: '';width: 7px; height: 50px; position: absolute;left: -3px;top: -60px; background: red;}
+
+.min-hand{position: absolute; width: 1px; height: 1px; z-index: 9; background: red; animation: min-hand 3600s linear infinite}
+
+.min-hand::before{content: '';width: 1px; height: 1px; position: absolute;left: -3px;top: -126px; border-left: 3px solid transparent;border-right: 3px solid transparent; border-bottom: 80px solid #000;}
+
+.min-hand::after{content: '';width: 1px; height: 1px; position: absolute;left: -3px;top: -45px; border-left: 3px solid transparent;border-right: 3px solid transparent; border-top: 40px solid #000;}
+
+.hr-hand{position: absolute; width: 1px; height: 1px; z-index: 9; background: red; animation: hr-hand 43200s linear infinite;}
+
+.hr-hand::before{content: '';width: 1px; height: 1px; position: absolute;left: -3px;top: -100px; border-left: 3px solid transparent;border-right: 3px solid transparent; border-bottom: 54px solid #000;}
+
+.hr-hand::after{content: '';width: 1px; height: 1px; position: absolute;left: -3px;top: -45px; border-left: 3px solid transparent;border-right: 3px solid transparent; border-top: 40px solid #000;}
+
